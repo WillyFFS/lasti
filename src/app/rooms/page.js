@@ -15,6 +15,7 @@ const getKamars = async () => {
         throw new Error('Failed to fetch data')
     }
     return response.json();
+
 }
 
 
