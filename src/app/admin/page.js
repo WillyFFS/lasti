@@ -3,7 +3,7 @@ import TableKamar from "@/components/TableKamar";
 import React from "react";
 
 const getKamars = async () => {
-  const response = await fetch("http://localhost:3000/api/kamar", {
+  const response = await fetch("/api/kamar", {
     next: {
       revalidate: 0,
     },
