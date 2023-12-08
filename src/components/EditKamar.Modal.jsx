@@ -22,7 +22,7 @@ export default function EditKamarModal({ kamarId }) {
     // Fetch the existing Kamar data based on kamarId and set it to editedKamar
     const fetchKamarData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/kamar/${kamarId}`);
+        const response = await fetch(`/api/kamar/${kamarId}`);
         const data = await response.json();
         setEditedKamar(data); // Assuming the API response returns the Kamar data
       } catch (error) {
@@ -50,7 +50,7 @@ export default function EditKamarModal({ kamarId }) {
 
     try {
       console.log("Updated");
-      const response = await fetch(`http://localhost:3000/api/kamar/${kamarId}`, {
+      const response = await fetch(`/api/kamar/${kamarId}`, {
         method: "PUT", // Assuming you use PUT method for updating
         body: JSON.stringify(editedKamar),
         headers: { "Content-Type": "application/json" },

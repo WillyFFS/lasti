@@ -24,7 +24,7 @@ export default function Login(props) {
       const password= login.password;
       try{
         console.log("Uploaded");
-        const response = await fetch(`http://localhost:3000/api/${email}`,{
+        const response = await fetch(`/api/${email}`,{
             method: "POST",
             body: JSON.stringify({
               password
@@ -33,7 +33,7 @@ export default function Login(props) {
         });
         const data = await response.json();
         if(data.redirect){
-          router.push(`http://localhost:3000/${data.redirect}`)
+          router.push(`/${data.redirect}`)
           props.setIsLogin(true);
           props.setOpen(false);
           setLogin({email: "", password: ""})

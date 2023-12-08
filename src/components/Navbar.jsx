@@ -15,7 +15,7 @@ const Navbar = () => {
 
   function signOut() {
     setIsLogin(false)
-    router.push(`http://localhost:3000/`)
+    router.push(`/`)
   }
 
   return (

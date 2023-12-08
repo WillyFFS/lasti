@@ -4,7 +4,7 @@ import EditKamarModal from "./EditKamar.Modal";
 import DeleteKamarModal from "./DeleteKamarModal";
 
 const getKamars = async () => {
-  const response = await fetch("http://localhost:3000/api/kamar", {
+  const response = await fetch("api/kamar", {
     next: {
       revalidate: 0,
     },

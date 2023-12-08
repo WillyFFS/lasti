@@ -31,7 +31,7 @@ export default function AddKamarModal() {
     const namaUser = newKamar.namaUser;
     try {
       console.log("Uploaded");
-      const response = await fetch("http://localhost:3000/api/kamar", {
+      const response = await fetch("/api/kamar", {
         method: "POST",
         body: JSON.stringify({
           noKamar,
