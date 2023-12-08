@@ -4,7 +4,7 @@ import EditKamarModal from "./EditKamar.Modal";
 import DeleteKamarModal from "./DeleteKamarModal";
 
 const getKamars = async () => {
-  const response = await fetch("api/kamar", {
+  const response = await fetch(`${process.env.URL}/api/kamar`, {
     next: {
       revalidate: 0,
     },

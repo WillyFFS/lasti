@@ -2,7 +2,7 @@ import React from 'react'
 import ListKamar from '@/components/ListKamar'
 
 const getKamars = async () => {
-    const response = await fetch('/api/kamar', {
+    const response = await fetch(`${process.env.URL}/api/kamar`, {
         next: {
             revalidate: 0,
         }

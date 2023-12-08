@@ -15,7 +15,7 @@ const Navbar = () => {
 
   function signOut() {
     setIsLogin(false)
-    router.push(`/`)
+    router.push(`${process.env.URL}/`)
   }
 
   return (

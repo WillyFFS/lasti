@@ -2,8 +2,9 @@ import AddKamarModal from "@/components/AddKamarModal";
 import TableKamar from "@/components/TableKamar";
 import React from "react";
 
+
 const getKamars = async () => {
-  const response = await fetch("/api/kamar", {
+  const response = await fetch(`${process.env.URL}/api/kamar`, {
     next: {
       revalidate: 0,
     },

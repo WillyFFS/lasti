@@ -10,7 +10,7 @@ export default function DeleteKamarModal({ kamarId }) {
   const handleDelete = async () => {
     try {
       console.log("Deleted");
-      const response = await fetch(`/api/kamar/${kamarId}`, {
+      const response = await fetch(`${process.env.URL}/api/kamar/${kamarId}`, {
         method: "DELETE",
       });
       window.location.reload();

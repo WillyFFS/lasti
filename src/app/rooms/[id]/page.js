@@ -8,7 +8,7 @@ import { useParams } from 'next/navigation'
 
 const getDetailKamar = async () => {
   const params = useParams();
-  const response = await fetch(`/api/kamar/${params.id}`, {
+  const response = await fetch(`${process.env.URL}/api/kamar/${params.id}`, {
       next: {
           revalidate: 0,
       }
@@ -27,7 +27,7 @@ const daftar = async (detailKamar) => {
 
     // Perform the PUT request
     detailKamar[0].status = "Unavailable";
-    const updateResponse = await fetch(`/api/kamar/${detailKamar[0]._id}`, {
+    const updateResponse = await fetch(`${process.env.URL}/api/kamar/${detailKamar[0]._id}`, {
       method: "PUT",
       body: JSON.stringify(detailKamar[0]),
       headers: { "Content-Type": "application/json" },

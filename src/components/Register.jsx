@@ -44,7 +44,7 @@ export default function Register(props) {
       const role= register.role;
       try{
         console.log("Uploaded");
-        const response = await fetch('/api/user',{
+        const response = await fetch(`${process.env.URL}/api/user`,{
             method: "POST",
             body: JSON.stringify({
               email,

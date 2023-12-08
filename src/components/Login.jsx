@@ -24,7 +24,7 @@ export default function Login(props) {
       const password= login.password;
       try{
         console.log("Uploaded");
-        const response = await fetch(`/api/${email}`,{
+        const response = await fetch(`${process.env.URL}/api/${email}`,{
             method: "POST",
             body: JSON.stringify({
               password

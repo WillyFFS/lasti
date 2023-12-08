@@ -29,7 +29,7 @@ function App() {
     const namaUser= newKamar.namaUser
     try{
         console.log("Uploaded");
-        const response = await fetch('/api/kamar',{
+        const response = await fetch(`${process.env.URL}/api/kamar`,{
             method: "POST",
             body: JSON.stringify({
                 noKamar,
