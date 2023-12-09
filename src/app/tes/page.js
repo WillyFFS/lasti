@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 function App() {
-  if(!process.env.URL){
+  if(process.env.URL === undefine){
     return <></>;
   }
   const [newKamar, setNewKamar] = useState( {

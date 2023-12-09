@@ -7,7 +7,7 @@ import { faLocationDot, faArrowUpFromBracket, faCalendarDay } from '@fortawesome
 import { useParams } from 'next/navigation'
 
 const getDetailKamar = async () => {
-  if(!process.env.URL){
+  if(process.env.URL === undefine){
     return <></>;
   }
   const params = useParams();

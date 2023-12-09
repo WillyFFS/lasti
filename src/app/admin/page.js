@@ -4,7 +4,7 @@ import React from "react";
 
 
 const getKamars = async () => {
-  if(!process.env.URL){
+  if(process.env.URL === undefined){
     return <></>;
   }
   const response = await fetch(`${process.env.URL}/api/kamar`, {
