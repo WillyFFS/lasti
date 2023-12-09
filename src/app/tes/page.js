@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 function App() {
   if(!process.env.URL){
-    return null;
+    return <></>;
   }
   const [newKamar, setNewKamar] = useState( {
     noKamar:"99a", 
